@@ -10,7 +10,7 @@ const stats = [
 
 export function EnterpriseTeaser() {
   return (
-    <section className="py-24 md:py-32 bg-[#0a0a1a]">
+    <section className="py-24 md:py-32 bg-zubda-900">
       <Container>
         <div className="max-w-3xl mb-16">
           <p className="text-sm font-medium uppercase tracking-widest text-zubda-400 mb-4">

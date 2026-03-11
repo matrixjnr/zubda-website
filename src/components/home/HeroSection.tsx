@@ -3,7 +3,7 @@ import { Container } from '@/components/shared/Container';
 
 export function HeroSection() {
   return (
-    <section className="bg-[#0a0a1a] pt-24 pb-32 md:pt-32 md:pb-40">
+    <section className="bg-zubda-900 pt-24 pb-32 md:pt-32 md:pb-40">
       <Container>
         <div className="max-w-4xl">
           <p className="text-sm font-medium uppercase tracking-widest text-zubda-400 mb-6">

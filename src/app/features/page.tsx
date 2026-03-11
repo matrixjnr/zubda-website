@@ -11,7 +11,7 @@ export default function FeaturesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-24 md:pb-32 bg-[#0a0a1a] text-white">
+      <section className="pt-32 pb-24 md:pb-32 bg-zubda-900 text-white">
         <Container>
           <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-widest text-zubda-500 mb-6">
@@ -82,7 +82,7 @@ export default function FeaturesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 md:py-32 bg-[#0a0a1a] text-white">
+      <section className="py-24 md:py-32 bg-zubda-900 text-white">
         <Container className="text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-zubda-500 mb-6">
             Get started

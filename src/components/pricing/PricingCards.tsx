@@ -61,7 +61,7 @@ export function PricingCards({ tiers }: PricingCardsProps) {
                 key={tier.name}
                 className={`relative p-8 h-full flex flex-col ${
                   isHighlighted
-                    ? 'bg-[#0a0a1a] text-white'
+                    ? 'bg-zubda-900 text-white'
                     : 'bg-white border border-gray-200'
                 }`}
               >
