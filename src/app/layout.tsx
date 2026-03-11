@@ -8,11 +8,14 @@ const ibmPlex = IBM_Plex_Sans({ subsets: ['latin'], weight: ['300', '400', '500'
 const notoArabic = Noto_Sans_Arabic({ subsets: ['arabic'], variable: '--font-arabic', weight: ['400', '700'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://zubda.com'),
   title: {
     default: 'Zubda — Cloud ERP for the Gulf',
     template: '%s | Zubda',
   },
   description: 'Offline-first cloud ERP built for UAE and GCC businesses. Accounting, inventory, POS, HR, and more — with full FTA VAT compliance. Works anywhere in the world.',
+  keywords: ['ERP', 'cloud ERP', 'UAE ERP', 'offline ERP', 'VAT compliance', 'WPS payroll', 'inventory management', 'POS system', 'accounting software', 'GCC', 'Dubai', 'Abu Dhabi'],
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'Zubda — Cloud ERP for the Gulf',
     description: 'Modern ERP system designed for businesses worldwide, with deep UAE and GCC compliance.',

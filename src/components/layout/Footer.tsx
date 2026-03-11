@@ -26,6 +26,7 @@ export function Footer() {
           <div>
             <h3 className="text-xs font-medium text-white uppercase tracking-widest mb-5">Company</h3>
             <ul className="space-y-3 text-sm">
+              <li><Link href="/about/" className="hover:text-white transition-colors">About</Link></li>
               <li><a href="mailto:hello@zubda.com" className="hover:text-white transition-colors">Contact</a></li>
               <li><a href="mailto:sales@zubda.com" className="hover:text-white transition-colors">Sales</a></li>
             </ul>
@@ -34,8 +35,8 @@ export function Footer() {
           <div>
             <h3 className="text-xs font-medium text-white uppercase tracking-widest mb-5">Legal</h3>
             <ul className="space-y-3 text-sm">
-              <li><span className="text-gray-600">Privacy Policy</span></li>
-              <li><span className="text-gray-600">Terms of Service</span></li>
+              <li><Link href="/privacy/" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms/" className="hover:text-white transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
         </div>
