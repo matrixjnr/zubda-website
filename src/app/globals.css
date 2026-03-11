@@ -13,13 +13,16 @@
   --color-zubda-900: #002554;
   --color-zubda-950: #001a3d;
 
-  --color-accent: #00b4d8;
+  --color-navy: #0a0a1a;
+  --color-navy-light: #111827;
+
   --color-success: #10b981;
   --color-warning: #f59e0b;
   --color-danger: #ef4444;
 
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", "Inter", system-ui, sans-serif;
   --font-arabic: "Noto Sans Arabic", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 
 html {
@@ -32,6 +35,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.dark {
-  color-scheme: dark;
+::selection {
+  background-color: #0078d4;
+  color: white;
 }

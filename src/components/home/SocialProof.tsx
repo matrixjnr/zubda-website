@@ -1,53 +1,46 @@
+import Link from 'next/link';
 import { Container } from '@/components/shared/Container';
-import { SectionHeader } from '@/components/shared/SectionHeader';
-import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll';
 
-const testimonials = [
-  {
-    quote: 'Zubda transformed how we manage our retail operations. The offline POS means we never miss a sale.',
-    name: 'Coming Soon',
-    title: 'Retail Business Owner',
-    company: 'UAE Retail',
-  },
-  {
-    quote: 'Finally, an ERP that understands UAE compliance from day one. No more patching together plugins.',
-    name: 'Coming Soon',
-    title: 'Finance Manager',
-    company: 'Trading Company',
-  },
-  {
-    quote: 'The multi-device sync is incredible. Our warehouse and office are always on the same page.',
-    name: 'Coming Soon',
-    title: 'Operations Director',
-    company: 'Distribution Business',
-  },
+const metrics = [
+  { value: 'Same day', label: 'Go-live time' },
+  { value: '$0', label: 'Implementation cost' },
+  { value: '6', label: 'Platforms supported' },
+  { value: 'Free', label: 'To start' },
 ];
 
 export function SocialProof() {
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section className="py-24 md:py-32 bg-[#f8f9fa]">
       <Container>
-        <SectionHeader
-          badge="Trusted by Businesses"
-          title="What our customers say"
-        />
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <p className="text-sm font-medium uppercase tracking-widest text-zubda-500 mb-4">
+            Get started
+          </p>
+          <h2 className="text-3xl md:text-5xl font-semibold text-[#161616] tracking-tight mb-5">
+            Go live today. Not in six months.
+          </h2>
+          <p className="text-lg text-[#525252] leading-relaxed">
+            No consultants. No lengthy implementation. Sign up, configure your business, and start operating — all in the same day. Your data stays yours, syncs everywhere, works offline.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((t, i) => (
-            <AnimateOnScroll key={i} delay={i * 100}>
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
-                <p className="text-gray-600 dark:text-gray-400 mb-6 italic leading-relaxed">&ldquo;{t.quote}&rdquo;</p>
-                <div>
-                  <p className="font-semibold text-gray-900 dark:text-white">{t.name}</p>
-                  <p className="text-sm text-gray-500">{t.title}, {t.company}</p>
-                </div>
-              </div>
-            </AnimateOnScroll>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-gray-200 mb-16">
+          {metrics.map((m) => (
+            <div key={m.label} className="bg-[#f8f9fa] p-8 text-center">
+              <div className="text-3xl md:text-4xl font-semibold text-[#161616] tracking-tight mb-1">{m.value}</div>
+              <div className="text-sm text-[#525252]">{m.label}</div>
+            </div>
           ))}
         </div>
 
-        {/* TODO: Replace with real testimonials */}
-        <p className="text-center text-sm text-gray-400 mt-8">Join businesses across the UAE, GCC, and beyond</p>
+        <div className="text-center">
+          <Link
+            href="/pricing/"
+            className="inline-flex items-center px-8 py-3.5 text-base font-medium bg-zubda-500 text-white hover:bg-zubda-600 transition-colors"
+          >
+            Start free trial
+          </Link>
+        </div>
       </Container>
     </section>
   );

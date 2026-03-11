@@ -1,42 +1,46 @@
-import { Button } from '@/components/shared/Button';
+import Link from 'next/link';
 import { Container } from '@/components/shared/Container';
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden pt-20 pb-28 md:pt-32 md:pb-40">
-      {/* Background decoration */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-zubda-100/30 dark:bg-zubda-900/20 blur-3xl" />
-      </div>
+    <section className="bg-[#0a0a1a] pt-24 pb-32 md:pt-32 md:pb-40">
+      <Container>
+        <div className="max-w-4xl">
+          <p className="text-sm font-medium uppercase tracking-widest text-zubda-400 mb-6">
+            Cloud ERP
+          </p>
 
-      <Container className="text-center">
-        <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-zubda-50 text-zubda-600 dark:bg-zubda-950 dark:text-zubda-300 mb-6">
-          Cloud ERP — Works Everywhere
-        </span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold text-white tracking-tight mb-6 leading-[1.05]">
+            The bottom line
+            <br />
+            for your business
+          </h1>
 
-        <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
-          The bottom line
-          <br />
-          for your business.
-        </h1>
-        <p className="font-arabic text-4xl md:text-6xl font-bold text-zubda-500 mb-8">
-          زبدة
-        </p>
+          <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mb-12 leading-relaxed">
+            Offline-first cloud ERP with full UAE VAT compliance.
+            Accounting, inventory, POS, HR, and 15+ modules — one system
+            that works even when the internet does not.
+          </p>
 
-        <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Offline-first cloud ERP with full UAE VAT compliance.
-          Accounting, inventory, POS, HR, and 15+ modules — one system
-          that works even when the internet does not.
-        </p>
+          <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
+            <Link
+              href="/pricing/"
+              className="px-8 py-3.5 text-base font-medium bg-zubda-500 text-white hover:bg-zubda-600 transition-colors"
+            >
+              Start free trial
+            </Link>
+            <Link
+              href="mailto:sales@zubda.com"
+              className="px-8 py-3.5 text-base font-medium border border-white/20 text-white hover:bg-white/5 transition-colors"
+            >
+              Talk to sales
+            </Link>
+          </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-          <Button href="/pricing/" size="lg">Start Free Trial</Button>
-          <Button href="mailto:sales@zubda.com" variant="secondary" size="lg">Book a Demo &rarr;</Button>
+          <p className="text-sm text-gray-500">
+            No credit card required &middot; 14-day free trial &middot; All platforms
+          </p>
         </div>
-
-        <p className="text-sm text-gray-500 dark:text-gray-500">
-          No credit card required &middot; 14-day free trial &middot; All platforms
-        </p>
       </Container>
     </section>
   );

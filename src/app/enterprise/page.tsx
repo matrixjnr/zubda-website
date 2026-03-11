@@ -1,8 +1,5 @@
 import type { Metadata } from 'next';
 import { Container } from '@/components/shared/Container';
-import { SectionHeader } from '@/components/shared/SectionHeader';
-import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll';
-import { Button } from '@/components/shared/Button';
 
 export const metadata: Metadata = {
   title: 'Enterprise',
@@ -20,57 +17,51 @@ const scaleMetrics = [
 
 const architectureCards = [
   {
-    icon: '🗄️',
     title: 'Unlimited Scalability',
     description: 'Horizontally sharded infrastructure that handles billions of transactions across tenant-partitioned clusters. Your data grows, your performance stays the same.',
   },
   {
-    icon: '🔄',
     title: 'Real-Time Sync',
     description: 'Every device works independently and syncs automatically when online. Zero data loss, guaranteed consistency, and no manual reconciliation — even across unreliable connections.',
   },
   {
-    icon: '🧱',
     title: 'Modular Growth',
     description: 'Clean module boundaries mean you only use what you need. Each capability (accounting, inventory, HR, sales) works independently and scales on its own schedule.',
   },
   {
-    icon: '📱',
     title: 'Native on Every Platform',
     description: 'Runs natively on macOS, Windows, Linux, iOS, and Android. Not a web wrapper — true native performance with a local database and offline-first architecture.',
   },
   {
-    icon: '🔐',
     title: 'Multi-Tenant Security',
     description: 'Enterprise-grade tenant isolation at the database level. JWT authentication, role-based access control, full audit trails, and encrypted data at rest and in transit.',
   },
   {
-    icon: '🌍',
     title: 'Global Ready',
     description: 'Multi-currency, multi-language data support, and configurable tax rules. Deep UAE/GCC compliance built in, with the flexibility to operate in any country and any regulatory environment.',
   },
 ];
 
-const scaleComparisons = [
+const scaleJourney = [
   {
     title: 'Single Shop',
+    locations: '1',
     description: 'One location, one device, one user. Full POS, inventory, and accounting.',
-    scale: '1',
   },
   {
     title: 'Growing Business',
+    locations: '2 - 10',
     description: 'Multiple locations, team management, purchasing, HR and payroll.',
-    scale: '2-10',
   },
   {
     title: 'Regional Chain',
+    locations: '10 - 100',
     description: 'Multi-location inventory, stock transfers, advanced analytics, approval workflows.',
-    scale: '10-100',
   },
   {
     title: 'Enterprise',
+    locations: '100 - 10,000+',
     description: 'Thousands of locations, dedicated infrastructure, custom integrations, SLA guarantee.',
-    scale: '100-10,000+',
   },
 ];
 
@@ -78,23 +69,34 @@ export default function EnterprisePage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-20 pb-16 bg-gray-900 dark:bg-gray-950 text-white">
-        <Container className="text-center">
-          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-zubda-500/20 text-zubda-300 mb-6">
-            Enterprise Scale
-          </span>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-            From one store<br />to ten thousand.
-          </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
-            Zubda is architected for the scale of tomorrow while being practical for the businesses of today. The same codebase powers a single retail shop and a multi-country chain.
-          </p>
+      <section className="pt-32 pb-24 md:pb-32 bg-[#0a0a1a] text-white">
+        <Container>
+          <div className="max-w-3xl">
+            <p className="text-sm font-medium uppercase tracking-widest text-zubda-500 mb-6">
+              Enterprise Scale
+            </p>
+            <h1 className="text-5xl md:text-7xl font-semibold tracking-tight mb-6">
+              From one store<br />to ten thousand.
+            </h1>
+            <p className="text-lg leading-relaxed text-gray-400 max-w-2xl">
+              Zubda is architected for the scale of tomorrow while being practical for the businesses of today. The same codebase powers a single retail shop and a multi-country chain.
+            </p>
+          </div>
+        </Container>
+      </section>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-16">
+      {/* Metrics */}
+      <section className="py-24 md:py-32 bg-[#111827]">
+        <Container>
+          <div className="flex flex-wrap justify-between items-start divide-x divide-gray-700">
             {scaleMetrics.map((metric) => (
-              <div key={metric.label} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-zubda-400 mb-1">{metric.value}</div>
-                <div className="text-xs text-gray-500 uppercase tracking-wider">{metric.label}</div>
+              <div key={metric.label} className="flex-1 min-w-[140px] text-center py-4 px-4">
+                <div className="text-3xl md:text-5xl font-semibold tracking-tight text-white mb-2">
+                  {metric.value}
+                </div>
+                <div className="text-xs font-medium uppercase tracking-widest text-gray-500">
+                  {metric.label}
+                </div>
               </div>
             ))}
           </div>
@@ -102,119 +104,97 @@ export default function EnterprisePage() {
       </section>
 
       {/* Architecture */}
-      <section className="py-20">
+      <section className="py-24 md:py-32 bg-white">
         <Container>
-          <SectionHeader
-            badge="Architecture"
-            title="Built for reliability at any scale"
-            subtitle="Every design decision is made for uptime, performance, and your peace of mind."
-          />
+          <div className="max-w-3xl mb-16">
+            <p className="text-sm font-medium uppercase tracking-widest text-zubda-500 mb-4">
+              Architecture
+            </p>
+            <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-[#161616] mb-4">
+              Built for reliability at any scale
+            </h2>
+            <p className="text-lg leading-relaxed text-[#525252]">
+              Every design decision is made for uptime, performance, and your peace of mind.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {architectureCards.map((card, i) => (
-              <AnimateOnScroll key={card.title} delay={i * 75}>
-                <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800 hover:border-zubda-300 dark:hover:border-zubda-600 transition-all duration-300 h-full">
-                  <div className="text-4xl mb-4">{card.icon}</div>
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">{card.title}</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{card.description}</p>
-                </div>
-              </AnimateOnScroll>
+            {architectureCards.map((card) => (
+              <div
+                key={card.title}
+                className="border-l-2 border-zubda-500 pl-6 py-2"
+              >
+                <h3 className="text-lg font-semibold tracking-tight text-[#161616] mb-3">
+                  {card.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-[#525252]">
+                  {card.description}
+                </p>
+              </div>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* Scale Journey */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+      {/* Scale Journey — Horizontal Timeline */}
+      <section className="py-24 md:py-32 bg-[#f8f9fa]">
         <Container>
-          <SectionHeader
-            badge="Scale With You"
-            title="One platform, every stage of growth"
-            subtitle="No painful migration. No replatforming. Zubda grows from your first sale to your ten-thousandth location."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {scaleComparisons.map((stage, i) => (
-              <AnimateOnScroll key={stage.title} delay={i * 100}>
-                <div className="relative bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 h-full">
-                  <div className="text-xs font-bold text-zubda-500 uppercase tracking-wider mb-2">{stage.scale} Locations</div>
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{stage.title}</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">{stage.description}</p>
-                  {i < scaleComparisons.length - 1 && (
-                    <div className="hidden md:block absolute top-1/2 -right-3 text-gray-300 dark:text-gray-600 text-xl">&rarr;</div>
-                  )}
-                </div>
-              </AnimateOnScroll>
-            ))}
+          <div className="max-w-3xl mb-16">
+            <p className="text-sm font-medium uppercase tracking-widest text-zubda-500 mb-4">
+              Scale With You
+            </p>
+            <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-[#161616] mb-4">
+              One platform, every stage of growth
+            </h2>
+            <p className="text-lg leading-relaxed text-[#525252]">
+              No painful migration. No replatforming. Zubda grows from your first sale to your ten-thousandth location.
+            </p>
           </div>
-        </Container>
-      </section>
 
-      {/* Architecture diagram (simplified CSS) */}
-      <section className="py-20">
-        <Container>
-          <SectionHeader
-            badge="How It Works"
-            title="Sync architecture"
-            subtitle="Commands flow up from devices. Facts flow down from the server. Every device converges to the same state."
-          />
+          {/* Timeline */}
+          <div className="relative">
+            {/* Horizontal line */}
+            <div className="hidden md:block absolute top-6 left-0 right-0 h-px bg-gray-300" />
 
-          <AnimateOnScroll>
-            <div className="max-w-3xl mx-auto">
-              {/* Devices layer */}
-              <div className="flex justify-center gap-4 mb-4">
-                {['macOS', 'Windows', 'Linux', 'iOS', 'Android', 'Web'].map((platform) => (
-                  <div key={platform} className="px-3 py-2 rounded-lg bg-zubda-50 dark:bg-zubda-950 text-xs font-medium text-zubda-600 dark:text-zubda-300 border border-zubda-200 dark:border-zubda-800">
-                    {platform}
-                  </div>
-                ))}
-              </div>
-
-              {/* Arrow down */}
-              <div className="flex justify-center my-2">
-                <div className="flex flex-col items-center">
-                  <span className="text-xs text-gray-400 mb-1">Commands &uarr;</span>
-                  <div className="w-px h-8 bg-gray-300 dark:bg-gray-600" />
-                  <span className="text-xs text-gray-400 mt-1">&darr; Facts</span>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              {scaleJourney.map((stage) => (
+                <div key={stage.title} className="relative">
+                  {/* Timeline dot */}
+                  <div className="hidden md:block w-3 h-3 bg-zubda-500 mb-8" />
+                  <p className="text-xs font-medium uppercase tracking-widest text-zubda-500 mb-2">
+                    {stage.locations} Locations
+                  </p>
+                  <h3 className="text-lg font-semibold tracking-tight text-[#161616] mb-2">
+                    {stage.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-[#525252]">
+                    {stage.description}
+                  </p>
                 </div>
-              </div>
-
-              {/* Server layer */}
-              <div className="border-2 border-zubda-500 rounded-2xl p-6 mb-4">
-                <div className="text-center text-sm font-bold text-zubda-500 mb-3">Zubda Cloud</div>
-                <div className="flex flex-wrap justify-center gap-2">
-                  {['Accounting', 'Inventory', 'Sales', 'HR', 'Purchasing', 'Sync', 'Auth', 'Products'].map((mod) => (
-                    <span key={mod} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-xs text-gray-600 dark:text-gray-400">
-                      {mod}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Arrow down */}
-              <div className="flex justify-center my-2">
-                <div className="w-px h-8 bg-gray-300 dark:bg-gray-600" />
-              </div>
-
-              {/* Database layer */}
-              <div className="text-center">
-                <div className="inline-block px-6 py-3 rounded-xl bg-gray-900 dark:bg-gray-800 text-white text-sm font-medium">
-                  Sharded Multi-Tenant Database
-                </div>
-              </div>
+              ))}
             </div>
-          </AnimateOnScroll>
+          </div>
         </Container>
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-zubda-500 text-white">
+      <section className="py-24 md:py-32 bg-[#0a0a1a] text-white">
         <Container className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to scale?</h2>
-          <p className="text-zubda-100 mb-8 max-w-lg mx-auto">Talk to our enterprise team about a custom deployment tailored to your operations.</p>
-          <Button href="mailto:sales@zubda.com" size="lg" className="bg-white text-zubda-600 hover:bg-zubda-50 shadow-none">
+          <p className="text-sm font-medium uppercase tracking-widest text-zubda-500 mb-6">
+            Let us talk
+          </p>
+          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-6">
+            Ready to scale?
+          </h2>
+          <p className="text-lg leading-relaxed text-gray-400 mb-10 max-w-lg mx-auto">
+            Talk to our enterprise team about a custom deployment tailored to your operations.
+          </p>
+          <a
+            href="mailto:sales@zubda.com"
+            className="inline-flex items-center justify-center px-8 py-4 rounded bg-white text-[#161616] font-semibold hover:bg-gray-100 transition-colors"
+          >
             Contact Sales
-          </Button>
+          </a>
         </Container>
       </section>
     </>

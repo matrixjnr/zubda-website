@@ -1,6 +1,5 @@
 import { Container } from '@/components/shared/Container';
 import { SectionHeader } from '@/components/shared/SectionHeader';
-import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll';
 
 const features = [
   { label: 'Offline POS', zubda: true, odoo: false, sap: false, dynamics: false, erpnext: false },
@@ -11,57 +10,54 @@ const features = [
   { label: 'Double-Entry GL', zubda: true, odoo: true, sap: true, dynamics: true, erpnext: true },
   { label: 'Offline Sync', zubda: true, odoo: false, sap: false, dynamics: false, erpnext: false },
   { label: 'Starting Price', zubda: 'Free', odoo: 'Free*', sap: '$95/u/mo', dynamics: '$70/u/mo', erpnext: 'Free*' },
-  { label: 'Go-Live Time', zubda: 'Same day', odoo: 'Weeks', sap: '3-6 months', dynamics: '2-4 months', erpnext: 'Weeks' },
+  { label: 'Go-Live Time', zubda: 'Same day', odoo: 'Weeks', sap: '3–6 months', dynamics: '2–4 months', erpnext: 'Weeks' },
 ];
 
 type CellValue = boolean | string | 'partial';
 
-function CellContent({ value }: { value: CellValue }) {
-  if (value === true) return <span className="text-green-500 font-bold">&#10003;</span>;
-  if (value === false) return <span className="text-gray-300 dark:text-gray-600">&#10005;</span>;
-  if (value === 'partial') return <span className="text-amber-500">~</span>;
-  return <span className="text-sm">{value}</span>;
+function Cell({ value }: { value: CellValue }) {
+  if (value === true) return <span className="text-zubda-500 font-medium">Yes</span>;
+  if (value === false) return <span className="text-gray-300">—</span>;
+  if (value === 'partial') return <span className="text-amber-500">Partial</span>;
+  return <span className="text-sm font-medium text-[#161616]">{value}</span>;
 }
 
 export function ComparisonTable() {
   return (
-    <section className="py-20 md:py-28">
+    <section className="py-24 md:py-32">
       <Container>
         <SectionHeader
-          badge="How We Compare"
-          title="Zubda vs. the alternatives"
-          subtitle="See how Zubda stacks up against popular ERP systems."
+          overline="Comparison"
+          title="How Zubda compares"
         />
 
-        <AnimateOnScroll>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-gray-200 dark:border-gray-800">
-                  <th className="text-left py-4 px-4 font-medium text-gray-500 dark:text-gray-400">Feature</th>
-                  <th className="py-4 px-4 font-bold text-zubda-500 bg-zubda-50/50 dark:bg-zubda-950/50 rounded-t-xl">Zubda</th>
-                  <th className="py-4 px-4 font-medium text-gray-600 dark:text-gray-400">Odoo</th>
-                  <th className="py-4 px-4 font-medium text-gray-600 dark:text-gray-400">SAP B1</th>
-                  <th className="py-4 px-4 font-medium text-gray-600 dark:text-gray-400">Dynamics 365</th>
-                  <th className="py-4 px-4 font-medium text-gray-600 dark:text-gray-400">ERPNext</th>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b-2 border-[#161616]">
+                <th className="text-left py-4 pr-4 font-medium text-[#525252]">Capability</th>
+                <th className="py-4 px-4 font-semibold text-[#161616]">Zubda</th>
+                <th className="py-4 px-4 font-medium text-[#525252]">Odoo</th>
+                <th className="py-4 px-4 font-medium text-[#525252]">SAP B1</th>
+                <th className="py-4 px-4 font-medium text-[#525252]">Dynamics 365</th>
+                <th className="py-4 px-4 font-medium text-[#525252]">ERPNext</th>
+              </tr>
+            </thead>
+            <tbody>
+              {features.map((f) => (
+                <tr key={f.label} className="border-b border-gray-200">
+                  <td className="py-3.5 pr-4 text-[#161616] font-medium">{f.label}</td>
+                  <td className="py-3.5 px-4 text-center bg-zubda-50/40"><Cell value={f.zubda} /></td>
+                  <td className="py-3.5 px-4 text-center"><Cell value={f.odoo} /></td>
+                  <td className="py-3.5 px-4 text-center"><Cell value={f.sap} /></td>
+                  <td className="py-3.5 px-4 text-center"><Cell value={f.dynamics} /></td>
+                  <td className="py-3.5 px-4 text-center"><Cell value={f.erpnext} /></td>
                 </tr>
-              </thead>
-              <tbody>
-                {features.map((f, i) => (
-                  <tr key={f.label} className={`border-b border-gray-100 dark:border-gray-800 ${i % 2 === 0 ? '' : 'bg-gray-50/50 dark:bg-gray-900/50'}`}>
-                    <td className="py-3 px-4 text-gray-700 dark:text-gray-300 font-medium">{f.label}</td>
-                    <td className="py-3 px-4 text-center bg-zubda-50/30 dark:bg-zubda-950/30"><CellContent value={f.zubda} /></td>
-                    <td className="py-3 px-4 text-center"><CellContent value={f.odoo} /></td>
-                    <td className="py-3 px-4 text-center"><CellContent value={f.sap} /></td>
-                    <td className="py-3 px-4 text-center"><CellContent value={f.dynamics} /></td>
-                    <td className="py-3 px-4 text-center"><CellContent value={f.erpnext} /></td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-xs text-gray-400 mt-4 text-center">* Limited free tier or self-hosted only</p>
-        </AnimateOnScroll>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-gray-400 mt-6">* Limited free tier or self-hosted only</p>
       </Container>
     </section>
   );

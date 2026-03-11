@@ -2,21 +2,20 @@ import Link from 'next/link';
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-400">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-[#0a0a1a] text-gray-400 border-t border-white/5">
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <span className="text-2xl font-bold text-white">zubda</span>
-              <span className="text-lg font-arabic text-zubda-400">زبدة</span>
+              <span className="text-xl font-semibold text-white tracking-tight">zubda</span>
+              <span className="text-sm font-arabic text-zubda-400">زبدة</span>
             </Link>
-            <p className="text-sm mb-4">The bottom line for your business.</p>
-            <p className="text-xs text-gray-500">Cloud ERP built for businesses worldwide, with deep roots in the UAE and Gulf region.</p>
+            <p className="text-sm leading-relaxed mb-3">Cloud ERP built for businesses worldwide, with deep roots in the UAE and Gulf region.</p>
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Product</h3>
-            <ul className="space-y-2 text-sm">
+            <h3 className="text-xs font-medium text-white uppercase tracking-widest mb-5">Product</h3>
+            <ul className="space-y-3 text-sm">
               <li><Link href="/features/" className="hover:text-white transition-colors">Features</Link></li>
               <li><Link href="/pricing/" className="hover:text-white transition-colors">Pricing</Link></li>
               <li><Link href="/enterprise/" className="hover:text-white transition-colors">Enterprise</Link></li>
@@ -25,28 +24,25 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Company</h3>
-            <ul className="space-y-2 text-sm">
-              <li><span className="text-gray-500 cursor-default">About</span></li>
-              <li><span className="text-gray-500 cursor-default">Blog</span></li>
-              <li><span className="text-gray-500 cursor-default">Careers</span></li>
+            <h3 className="text-xs font-medium text-white uppercase tracking-widest mb-5">Company</h3>
+            <ul className="space-y-3 text-sm">
               <li><a href="mailto:hello@zubda.com" className="hover:text-white transition-colors">Contact</a></li>
+              <li><a href="mailto:sales@zubda.com" className="hover:text-white transition-colors">Sales</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Legal</h3>
-            <ul className="space-y-2 text-sm">
-              <li><span className="text-gray-500 cursor-default">Privacy Policy</span></li>
-              <li><span className="text-gray-500 cursor-default">Terms of Service</span></li>
-              <li><span className="text-gray-500 cursor-default">Security</span></li>
+            <h3 className="text-xs font-medium text-white uppercase tracking-widest mb-5">Legal</h3>
+            <ul className="space-y-3 text-sm">
+              <li><span className="text-gray-600">Privacy Policy</span></li>
+              <li><span className="text-gray-600">Terms of Service</span></li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm">&copy; {new Date().getFullYear()} Zubda. All rights reserved.</p>
-          <p className="text-xs text-gray-500">Designed and built in the UAE</p>
+        <div className="mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-xs text-gray-500">&copy; {new Date().getFullYear()} Zubda. All rights reserved.</p>
+          <p className="text-xs text-gray-600">Designed and built in the UAE</p>
         </div>
       </div>
     </footer>

@@ -1,22 +1,23 @@
 interface SectionHeaderProps {
-  badge?: string;
+  overline?: string;
   title: string;
   subtitle?: string;
+  light?: boolean;
 }
 
-export function SectionHeader({ badge, title, subtitle }: SectionHeaderProps) {
+export function SectionHeader({ overline, title, subtitle, light }: SectionHeaderProps) {
   return (
-    <div className="text-center max-w-3xl mx-auto mb-16">
-      {badge && (
-        <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-zubda-50 text-zubda-600 dark:bg-zubda-950 dark:text-zubda-300 mb-4">
-          {badge}
-        </span>
+    <div className="max-w-3xl mb-16">
+      {overline && (
+        <p className="text-sm font-medium uppercase tracking-widest text-zubda-500 mb-4">
+          {overline}
+        </p>
       )}
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+      <h2 className={`text-3xl md:text-5xl font-semibold tracking-tight mb-5 ${light ? 'text-white' : 'text-[#161616]'}`}>
         {title}
       </h2>
       {subtitle && (
-        <p className="text-lg text-gray-600 dark:text-gray-400">{subtitle}</p>
+        <p className={`text-lg leading-relaxed ${light ? 'text-gray-400' : 'text-[#525252]'}`}>{subtitle}</p>
       )}
     </div>
   );

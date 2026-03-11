@@ -1,25 +1,20 @@
 import { Container } from '@/components/shared/Container';
 import { SectionHeader } from '@/components/shared/SectionHeader';
-import { AnimateOnScroll } from '@/components/shared/AnimateOnScroll';
 
 const differentiators = [
   {
-    icon: '📡',
-    title: 'Offline-First',
+    title: 'Offline-first',
     description: 'Works without internet. Your POS keeps selling, your warehouse keeps receiving. Everything syncs automatically when connectivity returns.',
   },
   {
-    icon: '🌍',
-    title: 'Gulf-Native, Globally Ready',
+    title: 'Gulf-native, globally ready',
     description: 'Built from day one for FTA VAT, WPS payroll, Arabic invoices, and AED. Not a Western ERP with a localization patch — but versatile enough for any country.',
   },
   {
-    icon: '⚡',
-    title: 'Fast and Reliable',
-    description: 'Purpose-built for speed and stability — not legacy software with a fresh coat of paint. Native apps for macOS, Windows, Linux, iOS, and Android that feel instant.',
+    title: 'Fast and reliable',
+    description: 'Purpose-built for speed and stability. Native apps for macOS, Windows, Linux, iOS, and Android that feel instant — not a web app in disguise.',
   },
   {
-    icon: '💰',
     title: 'Affordable',
     description: 'Enterprise features at SME prices. Start free, grow to enterprise. No per-transaction fees, no hidden costs, no consultant army required to go live.',
   },
@@ -27,22 +22,19 @@ const differentiators = [
 
 export function WhyZubda() {
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section className="py-24 md:py-32 bg-[#f8f9fa]">
       <Container>
         <SectionHeader
-          badge="Why Zubda?"
+          overline="Why Zubda"
           title="What makes us different"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {differentiators.map((d, i) => (
-            <AnimateOnScroll key={d.title} delay={i * 100}>
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
-                <div className="text-4xl mb-4">{d.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{d.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{d.description}</p>
-              </div>
-            </AnimateOnScroll>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {differentiators.map((d) => (
+            <div key={d.title} className="border-l-2 border-zubda-500 pl-6">
+              <h3 className="text-xl font-semibold text-[#161616] mb-3">{d.title}</h3>
+              <p className="text-[#525252] leading-relaxed">{d.description}</p>
+            </div>
           ))}
         </div>
       </Container>
