@@ -36,7 +36,7 @@ export function Header() {
           </nav>
 
           <div className="hidden md:block">
-            <Button href="#" size="sm">Start Free Trial</Button>
+            <Button href="/pricing/" size="sm">Start Free Trial</Button>
           </div>
 
           <button
@@ -68,7 +68,7 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <Button href="#" size="sm" className="w-full mt-4">Start Free Trial</Button>
+            <Button href="/pricing/" size="sm" className="w-full mt-4">Start Free Trial</Button>
           </div>
         </div>
       )}

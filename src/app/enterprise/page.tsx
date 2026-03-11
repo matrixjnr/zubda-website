@@ -6,7 +6,7 @@ import { Button } from '@/components/shared/Button';
 
 export const metadata: Metadata = {
   title: 'Enterprise',
-  description: 'Scale from 1 to 10,000+ locations. PostgreSQL + Citus sharding, event-driven sync, modular architecture.',
+  description: 'Scale from 1 to 10,000+ locations. Horizontally sharded, real-time sync, modular architecture.',
 };
 
 const scaleMetrics = [
@@ -21,23 +21,23 @@ const scaleMetrics = [
 const architectureCards = [
   {
     icon: '🗄️',
-    title: 'PostgreSQL + Citus',
-    description: 'The world\'s most advanced open-source database with horizontal sharding via Citus. Handle billions of rows across tenant-partitioned clusters. Proven at scale by companies like Microsoft, Walmart, and Cloudflare.',
+    title: 'Unlimited Scalability',
+    description: 'Horizontally sharded infrastructure that handles billions of transactions across tenant-partitioned clusters. Your data grows, your performance stays the same.',
   },
   {
     icon: '🔄',
-    title: 'Event-Driven Sync',
-    description: 'Commands up, facts down. Every device works independently and syncs automatically when online. Idempotent processing, contiguous watermarks, and transaction-boundary consistency ensure zero data loss.',
+    title: 'Real-Time Sync',
+    description: 'Every device works independently and syncs automatically when online. Zero data loss, guaranteed consistency, and no manual reconciliation — even across unreliable connections.',
   },
   {
     icon: '🧱',
-    title: 'Modular Monolith',
-    description: 'Clean module boundaries with Spring Modulith. Each module (accounting, inventory, HR, sales) has its own domain, services, and APIs. Extract any module to a separate microservice when scale demands it.',
+    title: 'Modular Growth',
+    description: 'Clean module boundaries mean you only use what you need. Each capability (accounting, inventory, HR, sales) works independently and scales on its own schedule.',
   },
   {
     icon: '📱',
     title: 'Native on Every Platform',
-    description: 'Single Flutter codebase runs natively on macOS, Windows, Linux, iOS, and Android. Not a web wrapper — true native performance with local SQLite database and offline-first architecture.',
+    description: 'Runs natively on macOS, Windows, Linux, iOS, and Android. Not a web wrapper — true native performance with a local database and offline-first architecture.',
   },
   {
     icon: '🔐',
@@ -78,7 +78,7 @@ export default function EnterprisePage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-20 pb-16 bg-gray-900 text-white">
+      <section className="pt-20 pb-16 bg-gray-900 dark:bg-gray-950 text-white">
         <Container className="text-center">
           <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-zubda-500/20 text-zubda-300 mb-6">
             Enterprise Scale
@@ -106,8 +106,8 @@ export default function EnterprisePage() {
         <Container>
           <SectionHeader
             badge="Architecture"
-            title="Built on proven foundations"
-            subtitle="Every technology choice is made for reliability, performance, and scale."
+            title="Built for reliability at any scale"
+            subtitle="Every design decision is made for uptime, performance, and your peace of mind."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -181,7 +181,7 @@ export default function EnterprisePage() {
 
               {/* Server layer */}
               <div className="border-2 border-zubda-500 rounded-2xl p-6 mb-4">
-                <div className="text-center text-sm font-bold text-zubda-500 mb-3">Spring Boot Server</div>
+                <div className="text-center text-sm font-bold text-zubda-500 mb-3">Zubda Cloud</div>
                 <div className="flex flex-wrap justify-center gap-2">
                   {['Accounting', 'Inventory', 'Sales', 'HR', 'Purchasing', 'Sync', 'Auth', 'Products'].map((mod) => (
                     <span key={mod} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-xs text-gray-600 dark:text-gray-400">
@@ -199,7 +199,7 @@ export default function EnterprisePage() {
               {/* Database layer */}
               <div className="text-center">
                 <div className="inline-block px-6 py-3 rounded-xl bg-gray-900 dark:bg-gray-800 text-white text-sm font-medium">
-                  PostgreSQL + Citus (Sharded Multi-Tenant)
+                  Sharded Multi-Tenant Database
                 </div>
               </div>
             </div>
@@ -212,7 +212,7 @@ export default function EnterprisePage() {
         <Container className="text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to scale?</h2>
           <p className="text-zubda-100 mb-8 max-w-lg mx-auto">Talk to our enterprise team about a custom deployment tailored to your operations.</p>
-          <Button href="#" size="lg" className="bg-white text-zubda-600 hover:bg-zubda-50 shadow-none">
+          <Button href="mailto:sales@zubda.com" size="lg" className="bg-white text-zubda-600 hover:bg-zubda-50 shadow-none">
             Contact Sales
           </Button>
         </Container>

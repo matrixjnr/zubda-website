@@ -84,7 +84,7 @@ export default function CompliancePage() {
         <Container className="text-center">
           <h2 className="text-3xl font-bold mb-4">Compliance-ready from day one</h2>
           <p className="text-zubda-100 mb-8 max-w-lg mx-auto">Start your free trial and experience built-in compliance — no plugins, no add-ons, no extra cost.</p>
-          <a href="#" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-zubda-600 font-semibold hover:bg-zubda-50 transition-colors">
+          <a href="/pricing/" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-zubda-600 font-semibold hover:bg-zubda-50 transition-colors">
             Start Free Trial
           </a>
         </Container>

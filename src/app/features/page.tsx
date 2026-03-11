@@ -22,12 +22,12 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
-      <section className="pb-20">
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <Container>
           <div className="space-y-8">
             {modules.map((module, i) => (
               <AnimateOnScroll key={module.id} delay={i * 50}>
-                <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:border-zubda-300 dark:hover:border-zubda-600 transition-all duration-300">
+                <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 hover:border-zubda-300 dark:hover:border-zubda-600 transition-all duration-300">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="flex-shrink-0">
                       <div className="w-14 h-14 rounded-xl bg-zubda-50 dark:bg-zubda-950 flex items-center justify-center text-3xl">
@@ -68,7 +68,7 @@ export default function FeaturesPage() {
         <Container className="text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to see it in action?</h2>
           <p className="text-zubda-100 mb-8 max-w-lg mx-auto">Start your 14-day free trial and explore every module with your own data.</p>
-          <a href="#" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-zubda-600 font-semibold hover:bg-zubda-50 transition-colors">
+          <a href="/pricing/" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-zubda-600 font-semibold hover:bg-zubda-50 transition-colors">
             Start Free Trial
           </a>
         </Container>

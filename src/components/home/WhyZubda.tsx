@@ -15,8 +15,8 @@ const differentiators = [
   },
   {
     icon: '⚡',
-    title: 'Modern Stack',
-    description: 'Built on Spring Boot, Flutter, and PostgreSQL — not 1990s technology with a fresh coat of paint. Native apps for macOS, Windows, Linux, iOS, and Android.',
+    title: 'Fast and Reliable',
+    description: 'Purpose-built for speed and stability — not legacy software with a fresh coat of paint. Native apps for macOS, Windows, Linux, iOS, and Android that feel instant.',
   },
   {
     icon: '💰',

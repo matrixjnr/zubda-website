@@ -77,7 +77,7 @@ export function PricingCards({ tiers }: PricingCardsProps) {
                   </ul>
 
                   <a
-                    href="#"
+                    href={tier.cta === 'Contact Sales' ? 'mailto:sales@zubda.com' : '/pricing/'}
                     className={`w-full text-center py-3 px-6 rounded-full font-semibold transition-all ${
                       isHighlighted
                         ? 'bg-zubda-500 text-white hover:bg-zubda-600 shadow-md'

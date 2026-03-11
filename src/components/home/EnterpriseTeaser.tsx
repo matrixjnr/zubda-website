@@ -26,8 +26,8 @@ export function EnterpriseTeaser() {
 
             <p className="text-lg text-gray-400 mb-12 leading-relaxed">
               Zubda&apos;s modular architecture scales from a single retail shop to
-              multi-country operations with thousands of locations. PostgreSQL
-              with horizontal sharding, event-driven sync, and a design
+              multi-country operations with thousands of locations. Horizontally
+              sharded infrastructure, real-time sync, and a design
               that grows with your business.
             </p>
           </div>

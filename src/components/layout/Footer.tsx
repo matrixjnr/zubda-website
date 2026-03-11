@@ -27,19 +27,19 @@ export function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Company</h3>
             <ul className="space-y-2 text-sm">
-              <li><span className="text-gray-500">About</span></li>
-              <li><span className="text-gray-500">Blog</span></li>
-              <li><span className="text-gray-500">Careers</span></li>
-              <li><span className="text-gray-500">Contact</span></li>
+              <li><span className="text-gray-500 cursor-default">About</span></li>
+              <li><span className="text-gray-500 cursor-default">Blog</span></li>
+              <li><span className="text-gray-500 cursor-default">Careers</span></li>
+              <li><a href="mailto:hello@zubda.com" className="hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Legal</h3>
             <ul className="space-y-2 text-sm">
-              <li><span className="text-gray-500">Privacy Policy</span></li>
-              <li><span className="text-gray-500">Terms of Service</span></li>
-              <li><span className="text-gray-500">Security</span></li>
+              <li><span className="text-gray-500 cursor-default">Privacy Policy</span></li>
+              <li><span className="text-gray-500 cursor-default">Terms of Service</span></li>
+              <li><span className="text-gray-500 cursor-default">Security</span></li>
             </ul>
           </div>
         </div>

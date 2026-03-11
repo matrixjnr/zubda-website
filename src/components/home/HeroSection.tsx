@@ -30,8 +30,8 @@ export function HeroSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-          <Button href="#" size="lg">Start Free Trial</Button>
-          <Button href="#" variant="secondary" size="lg">Book a Demo &rarr;</Button>
+          <Button href="/pricing/" size="lg">Start Free Trial</Button>
+          <Button href="mailto:sales@zubda.com" variant="secondary" size="lg">Book a Demo &rarr;</Button>
         </div>
 
         <p className="text-sm text-gray-500 dark:text-gray-500">
