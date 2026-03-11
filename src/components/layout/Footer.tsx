@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export function Footer() {
   return (
-    <footer className="bg-zubda-900 text-gray-400 border-t border-white/5">
+    <footer className="bg-zubda-900 text-gray-400 border-t border-zubda-800">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div>
@@ -40,7 +40,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="mt-16 pt-8 border-t border-zubda-800 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-gray-500">&copy; {new Date().getFullYear()} Zubda. All rights reserved.</p>
           <p className="text-xs text-gray-600">Designed and built in the UAE</p>
         </div>
