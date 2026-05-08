@@ -20,7 +20,7 @@ export function SocialProof() {
             Go live today. Not in six months.
           </h2>
           <p className="text-lg text-[#525252] leading-relaxed">
-            No consultants. No lengthy implementation. Sign up, configure your business, and start operating — all in the same day. Your data stays yours, syncs everywhere, works offline.
+            No consultants. No lengthy implementation. Sign up, configure your business, and start operating, all in the same day. Your data stays yours, syncs everywhere, works offline.
           </p>
         </div>
 

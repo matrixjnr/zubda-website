@@ -2,15 +2,19 @@ import { Container } from '@/components/shared/Container';
 import { SectionHeader } from '@/components/shared/SectionHeader';
 
 const features = [
-  { label: 'Offline POS', zubda: true, odoo: false, sap: false, dynamics: false, erpnext: false },
-  { label: 'UAE VAT (FTA)', zubda: true, odoo: 'partial', sap: true, dynamics: true, erpnext: 'partial' },
-  { label: 'WPS Payroll', zubda: true, odoo: false, sap: 'partial', dynamics: 'partial', erpnext: false },
-  { label: 'Arabic Invoices', zubda: true, odoo: 'partial', sap: true, dynamics: true, erpnext: 'partial' },
-  { label: 'Native Mobile App', zubda: true, odoo: false, sap: false, dynamics: false, erpnext: false },
-  { label: 'Double-Entry GL', zubda: true, odoo: true, sap: true, dynamics: true, erpnext: true },
-  { label: 'Offline Sync', zubda: true, odoo: false, sap: false, dynamics: false, erpnext: false },
-  { label: 'Starting Price', zubda: 'Free', odoo: 'Free*', sap: '$95/u/mo', dynamics: '$70/u/mo', erpnext: 'Free*' },
-  { label: 'Go-Live Time', zubda: 'Same day', odoo: 'Weeks', sap: '3–6 months', dynamics: '2–4 months', erpnext: 'Weeks' },
+  { label: 'Works Offline', zubda: true, odoo: false, sap: false, dynamics: false, erpnext: false },
+  { label: 'All-in-One (POS+GL+HR+Inv)', zubda: true, odoo: 'partial', sap: true, dynamics: true, erpnext: true },
+  { label: 'Offline Data Sync', zubda: true, odoo: false, sap: false, dynamics: false, erpnext: false },
+  { label: 'Native Desktop + Mobile', zubda: true, odoo: false, sap: false, dynamics: false, erpnext: false },
+  { label: 'UAE/GCC Tax Compliance', zubda: true, odoo: 'partial', sap: true, dynamics: true, erpnext: 'partial' },
+  { label: 'East Africa Tax (KE/UG/TZ)', zubda: true, odoo: false, sap: false, dynamics: false, erpnext: false },
+  { label: 'E-Invoicing with QR', zubda: true, odoo: 'partial', sap: true, dynamics: true, erpnext: 'partial' },
+  { label: 'WhatsApp Integration', zubda: true, odoo: 'partial', sap: false, dynamics: false, erpnext: false },
+  { label: 'Conflict Detection', zubda: true, odoo: false, sap: false, dynamics: false, erpnext: false },
+  { label: 'Setup Time', zubda: 'Same day', odoo: '2–4 weeks', sap: '3–6 months', dynamics: '2–4 months', erpnext: '2–4 weeks' },
+  { label: 'Implementation Cost', zubda: '$0', odoo: '$2,000+', sap: '$20,000+', dynamics: '$15,000+', erpnext: '$3,000+' },
+  { label: 'Solo Operator', zubda: '$39/mo', odoo: '$24/mo*', sap: '$95/mo', dynamics: '$70/mo', erpnext: '$50/mo*' },
+  { label: '5-Seat Team', zubda: '$79/mo', odoo: '$120/mo', sap: '$475/mo', dynamics: '$350/mo', erpnext: '$50/mo*' },
 ];
 
 type CellValue = boolean | string | 'partial';
@@ -57,7 +61,7 @@ export function ComparisonTable() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-400 mt-6">* Limited free tier or self-hosted only</p>
+        <p className="text-xs text-gray-400 mt-6">* ERPNext requires self-hosting and developer setup. Odoo multi-app pricing adds up per user. SAP/D365 require implementation partners.</p>
       </Container>
     </section>
   );

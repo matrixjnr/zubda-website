@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { Container } from '@/components/shared/Container';
 
 export const metadata: Metadata = {
-  title: 'Enterprise',
-  description: 'Scale from 1 to 10,000+ locations. Horizontally sharded, real-time sync, modular architecture.',
+  title: 'Enterprise ERP. Scale from 1 to 10,000+ Locations',
+  description: 'Enterprise-grade ERP that scales with your business. Multi-location, multi-currency, real-time sync across all devices. Built for retail chains, franchise operations, and multi-branch businesses in the Middle East, Africa, and Europe.',
 };
 
 const scaleMetrics = [
@@ -22,7 +22,7 @@ const architectureCards = [
   },
   {
     title: 'Real-Time Sync',
-    description: 'Every device works independently and syncs automatically when online. Zero data loss, guaranteed consistency, and no manual reconciliation — even across unreliable connections.',
+    description: 'Every device works independently and syncs automatically when online. Zero data loss, guaranteed consistency, and no manual reconciliation, even across unreliable connections.',
   },
   {
     title: 'Modular Growth',
@@ -30,7 +30,7 @@ const architectureCards = [
   },
   {
     title: 'Native on Every Platform',
-    description: 'Runs natively on macOS, Windows, Linux, iOS, and Android. Not a web wrapper — true native performance with a local database and offline-first architecture.',
+    description: 'Runs natively on macOS, Windows, Linux, iOS, and Android. Not a web wrapper. true native performance with a local database and offline-first architecture.',
   },
   {
     title: 'Multi-Tenant Security',
@@ -136,7 +136,7 @@ export default function EnterprisePage() {
         </Container>
       </section>
 
-      {/* Scale Journey — Horizontal Timeline */}
+      {/* Scale Journey. Horizontal Timeline */}
       <section className="py-24 md:py-32 bg-[#f8f9fa]">
         <Container>
           <div className="max-w-3xl mb-16">

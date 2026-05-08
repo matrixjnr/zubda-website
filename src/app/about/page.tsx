@@ -4,7 +4,7 @@ import { Container } from '@/components/shared/Container';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Zubda is a UAE-born cloud ERP built for businesses worldwide. Offline-first, compliance-ready, and affordable.',
+  description: 'Zubda is an offline-first cloud ERP built for growing businesses. Compliance-ready, affordable, and trusted across three continents.',
 };
 
 const values = [
@@ -16,7 +16,7 @@ const values = [
   {
     title: 'Compliance by design',
     description:
-      'VAT returns, WPS payroll files, FTA audit trails — compliance is not an afterthought or an add-on. It is built into every module from the ground up, so you stay compliant without extra effort.',
+      'VAT returns, WPS payroll files, FTA audit trails: compliance is not an afterthought or an add-on. It is built into every module from the ground up, so you stay compliant without extra effort.',
   },
   {
     title: 'Simplicity over complexity',
@@ -26,7 +26,7 @@ const values = [
   {
     title: 'Built to last',
     description:
-      'We make architectural decisions for the long term. Open standards, portable data, no vendor lock-in. Your business will grow and change — your ERP should be ready for that.',
+      'We make architectural decisions for the long term. Open standards, portable data, no vendor lock-in. Your business will grow and change, and your ERP should be ready for that.',
   },
 ];
 
@@ -44,7 +44,7 @@ export default function AboutPage() {
               The bottom line for your business
             </h1>
             <p className="text-lg leading-relaxed text-gray-400 max-w-2xl">
-              <span className="font-arabic text-zubda-400">زبدة</span> — in Arabic, it means the essence, the cream, the bottom line. We named our company after it because that is exactly what we deliver: the essential tools your business needs, without the noise.
+              <span className="font-arabic text-zubda-400">زبدة</span>. in Arabic, it means the essence, the cream, the bottom line. We named our company after it because that is exactly what we deliver: the essential tools your business needs, without the noise.
             </p>
           </div>
         </Container>
@@ -65,13 +65,13 @@ export default function AboutPage() {
             <div className="md:col-span-8">
               <div className="space-y-6 text-lg leading-relaxed text-[#525252]">
                 <p>
-                  Most ERP systems were designed for large enterprises with dedicated IT teams and unlimited budgets. Small and mid-sized businesses in the Gulf region have been left with two options: overpay for software that is too complex, or cobble together spreadsheets and disconnected tools.
+                  Most ERP systems were designed for large enterprises with dedicated IT teams and unlimited budgets. Small and mid-sized businesses across emerging markets have been left with two options: overpay for software that is too complex, or cobble together spreadsheets and disconnected tools.
                 </p>
                 <p>
                   We are building a third option. Zubda is a modern, cloud-native ERP that is offline-first, compliance-ready from day one, and priced so that a 5-person trading company gets the same quality software as a 500-person enterprise.
                 </p>
                 <p>
-                  Accounting, inventory, POS, HR, payroll, purchasing, sales — all connected, all syncing, all working even when the Wi-Fi drops. That is the promise.
+                  Accounting, inventory, POS, HR, payroll, purchasing, sales, all connected, all syncing, all working even when the Wi-Fi drops. That is the promise.
                 </p>
               </div>
             </div>
@@ -105,25 +105,25 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* UAE-born */}
+      {/* Global reach */}
       <section className="py-24 md:py-32 bg-white">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
             <div className="md:col-span-4">
               <p className="text-sm font-medium uppercase tracking-widest text-zubda-500 mb-4">
-                Where We Come From
+                Where We Operate
               </p>
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#161616]">
-                UAE-born, globally versatile
+                Built global from day one
               </h2>
             </div>
             <div className="md:col-span-8">
               <div className="space-y-6 text-lg leading-relaxed text-[#525252]">
                 <p>
-                  Zubda was founded in the UAE because we understand the unique challenges of doing business in this region. Multi-currency transactions, VAT compliance with the Federal Tax Authority, WPS payroll requirements, bilingual documentation — these are not edge cases for us, they are core features.
+                  Zubda was built for the realities of doing business across borders. Multi-currency transactions, country-specific VAT compliance, payroll regulations, bilingual documentation: these are not afterthoughts for us, they are core features that work out of the box.
                 </p>
                 <p>
-                  But great software should not be limited by geography. Zubda is designed for businesses anywhere in the world. The same offline-first reliability, clean interface, and modular architecture works whether you are running a retail chain in Dubai, a manufacturing operation in Riyadh, or a distribution company in Nairobi.
+                  Today, Zubda is trusted by businesses across the Middle East, East Africa, and Europe. The same offline-first reliability, clean interface, and modular architecture works whether you are running a retail chain in Dubai, a distribution company in Nairobi, or a wholesale operation in Dublin.
                 </p>
               </div>
             </div>

@@ -3,14 +3,14 @@ import { Container } from '@/components/shared/Container';
 import { SectionHeader } from '@/components/shared/SectionHeader';
 
 const features = [
-  { name: 'Point of Sale', description: 'Fast checkout with offline mode. Process sales without internet — syncs when back online.' },
-  { name: 'Accounting', description: 'Full double-entry general ledger. Automatic journal posting from sales, purchases, and expenses.' },
-  { name: 'Inventory', description: 'Multi-location tracking with real-time sync. Stocktakes, transfers, reorder points, and BOM.' },
-  { name: 'HR & Payroll', description: 'WPS-ready payroll with gratuity calculation, leave management, and attendance tracking.' },
-  { name: 'Purchasing', description: 'Purchase orders with GRN tracking, supplier management, and three-way matching.' },
-  { name: 'Sales & Orders', description: 'B2B sales with delivery notes, commissions, promotions, and approval workflows.' },
-  { name: 'Trade & Logistics', description: 'Shipment tracking, landed cost allocation, and post-dated cheque register.' },
-  { name: 'CRM', description: 'Leads, opportunities, pipeline management, and activity tracking — all integrated with sales.' },
+  { name: 'Point of Sale', description: 'Fast checkout with offline mode, barcode scanning, split payments, and automatic stock deduction.' },
+  { name: 'Accounting', description: 'Double-entry GL, trial balance, bank reconciliation, fixed assets, cost centers, and 27 built-in reports.' },
+  { name: 'Inventory', description: 'Multi-location stock with serial & batch tracking, stocktakes, transfers, BOM assembly, and conflict detection.' },
+  { name: 'HR & Payroll', description: 'WPS-ready payroll, leave management, attendance tracking, and department organization.' },
+  { name: 'Purchasing', description: 'Purchase orders, GRN receiving with serial capture, supplier management, and landed cost allocation.' },
+  { name: 'Sales & Orders', description: 'Quotations, invoices, delivery notes, commissions, promotions, and approval workflows.' },
+  { name: 'Channels', description: 'WhatsApp messaging, transactional emails, and marketplace connectors including Shopify. Reach customers everywhere.' },
+  { name: 'E-Invoicing', description: 'FTA/ZATCA compliant e-invoices with QR codes, ASP submission, and bank-grade PDF exports.' },
 ];
 
 export function FeatureGrid() {
@@ -20,7 +20,7 @@ export function FeatureGrid() {
         <SectionHeader
           overline="Capabilities"
           title="One system. Every department."
-          subtitle="15+ integrated modules that share data in real time — no imports, no exports, no double entry."
+          subtitle="15+ integrated modules that share data in real time. no imports, no exports, no double entry."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-200">

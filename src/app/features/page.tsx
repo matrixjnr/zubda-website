@@ -3,8 +3,9 @@ import { modules } from '@/lib/constants';
 import { Container } from '@/components/shared/Container';
 
 export const metadata: Metadata = {
-  title: 'Features',
-  description: 'POS, accounting, inventory, HR, purchasing, sales, trade, BOM and more. Explore all the modules that make Zubda the complete ERP.',
+  title: 'Features. POS, Accounting, Inventory, HR, CRM & More',
+  description: 'All-in-one business software: point of sale, accounting, inventory management, HR & payroll, CRM, purchasing, trade, quotations, e-invoicing, and 15+ more modules. Works offline. Perfect for retail, wholesale, distribution, and trading businesses.',
+  keywords: ['POS features', 'accounting features', 'inventory features', 'HR features', 'CRM features', 'business software features', 'ERP modules', 'shop management features'],
 };
 
 export default function FeaturesPage() {
@@ -21,7 +22,7 @@ export default function FeaturesPage() {
               Everything your business needs
             </h1>
             <p className="text-lg leading-relaxed text-gray-400 max-w-2xl">
-              Each module works standalone or as part of the complete ERP. Data flows automatically — no imports, no exports, no reconciliation.
+              Each module works standalone or as part of the complete ERP. Data flows automatically. no imports, no exports, no reconciliation.
             </p>
           </div>
         </Container>
@@ -91,7 +92,7 @@ export default function FeaturesPage() {
             Ready to see it in action?
           </h2>
           <p className="text-lg leading-relaxed text-gray-400 mb-10 max-w-lg mx-auto">
-            Start your 14-day free trial and explore every module with your own data.
+            Start your 30-day free trial and explore every module with your own data.
           </p>
           <a
             href="/pricing/"

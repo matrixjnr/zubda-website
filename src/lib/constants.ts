@@ -12,7 +12,7 @@ export const modules: Module[] = [
     id: 'pos',
     name: 'Point of Sale',
     icon: '🛒',
-    shortDescription: 'Fast checkout with offline mode. Process sales without internet — syncs automatically when connectivity returns.',
+    shortDescription: 'Fast checkout with offline mode. Process sales without internet and syncs automatically when connectivity returns.',
     features: [
       'Barcode scanning and product lookup',
       'Cash, card, and split payments',
@@ -219,7 +219,7 @@ export const modules: Module[] = [
     id: 'sync',
     name: 'Offline Sync Engine',
     icon: '🔄',
-    shortDescription: 'Intelligent sync that works offline-first. Commands up, facts down — every device stays consistent.',
+    shortDescription: 'Intelligent sync that works offline-first. Commands up, facts down, and every device stays consistent.',
     features: [
       'Full offline operation for all modules',
       'Automatic sync when online',
@@ -245,46 +245,37 @@ export interface PricingTier {
 
 export const pricingTiers: PricingTier[] = [
   {
-    name: 'Trial',
-    price: { monthly: 0, annual: 0 },
-    description: 'Try everything free for 14 days.',
-    badge: 'Free',
-    features: ['All modules included', 'Up to 3 users', 'Up to 3 devices', 'Full offline sync', 'Email support'],
-    limits: { users: '3', locations: '1', products: 'Unlimited' },
-    cta: 'Start Free Trial',
-  },
-  {
     name: 'Starter',
-    price: { monthly: 49, annual: 39 },
+    price: { monthly: 39, annual: 29 },
     description: 'For solo operators and small shops.',
-    features: ['POS + Inventory + Accounting', '1 user', '1 device', 'Up to 500 products', 'UAE VAT reports', 'Email support'],
-    limits: { users: '1', locations: '1', products: '500' },
+    features: ['POS + Inventory + Accounting', '1 seat', 'Up to 500 products', 'VAT compliance', 'Barcode generation & printing', 'Email support'],
+    limits: { users: '1 seat', locations: '1', products: '500' },
     cta: 'Get Started',
   },
   {
     name: 'Business',
-    price: { monthly: 99, annual: 79 },
+    price: { monthly: 79, annual: 59 },
     description: 'For growing businesses with a team.',
     badge: 'Most Popular',
     highlighted: true,
-    features: ['Everything in Starter', '3 users, 3 devices', 'Unlimited products', 'HR & Payroll (WPS)', 'Purchasing with GRN', 'Sales orders & quotations', 'Bank reconciliation', 'Fixed assets', 'Priority support'],
-    limits: { users: '3', locations: '3', products: 'Unlimited' },
+    features: ['Everything in Starter', '5 seats', 'Unlimited products', 'HR & Payroll', 'Purchasing & GRN', 'Sales orders & quotations', 'Serial & batch tracking', 'WhatsApp & email integration', 'E-invoicing', 'PDF exports', 'Priority support'],
+    limits: { users: '5 seats', locations: '3', products: 'Unlimited' },
     cta: 'Get Started',
   },
   {
     name: 'Trade',
-    price: { monthly: 199, annual: 159 },
+    price: { monthly: 149, annual: 119 },
     description: 'For trading companies and importers.',
-    features: ['Everything in Business', '5 users, 5 devices', 'Multi-currency support', 'Trade & logistics module', 'Landed cost allocation', 'PDC register', 'Commissions & promotions', 'Phone + email support'],
-    limits: { users: '5', locations: '5', products: 'Unlimited' },
+    features: ['Everything in Business', '10 seats', 'Multi-currency support', 'Trade & logistics', 'Landed cost (value, weight, volume)', 'Marketplace integration', 'CRM & forecasting', 'Commissions & promotions', 'Phone + email support'],
+    limits: { users: '10 seats', locations: '5', products: 'Unlimited' },
     cta: 'Get Started',
   },
   {
     name: 'Pro',
-    price: { monthly: 399, annual: 319 },
+    price: { monthly: 299, annual: 239 },
     description: 'For multi-location operations.',
-    features: ['Everything in Trade', '10+ users, 10 devices', 'Multi-location inventory', 'BOM & assembly', 'Stock transfers', 'Cost center tracking', 'Advanced analytics', 'Approval workflows', 'Dedicated support'],
-    limits: { users: '10+', locations: '10', products: 'Unlimited' },
+    features: ['Everything in Trade', '25 seats', 'Multi-location inventory', 'BOM & assembly', 'Stock transfers & stocktakes', 'Cost center tracking', '27 built-in reports', 'Approval workflows', 'Conflict detection', 'Dedicated support'],
+    limits: { users: '25 seats', locations: '10', products: 'Unlimited' },
     cta: 'Get Started',
   },
   {
@@ -292,7 +283,7 @@ export const pricingTiers: PricingTier[] = [
     price: 'custom',
     description: 'For large operations needing custom solutions.',
     badge: 'Custom',
-    features: ['Everything in Pro', 'Unlimited users & devices', 'Unlimited locations', 'Dedicated infrastructure', 'Custom integrations', 'SLA guarantee', 'On-site training', 'Dedicated account manager'],
+    features: ['Everything in Pro', 'Unlimited seats & locations', 'Dedicated infrastructure', 'Multiple payment gateways', 'Custom integrations & API', 'SLA guarantee', 'On-site training', 'Dedicated account manager'],
     limits: { users: 'Unlimited', locations: 'Unlimited', products: 'Unlimited' },
     cta: 'Contact Sales',
   },
@@ -323,6 +314,7 @@ export const navLinks = [
   { label: 'Pricing', href: '/pricing/' },
   { label: 'Enterprise', href: '/enterprise/' },
   { label: 'Compliance', href: '/compliance/' },
+  { label: 'Partners', href: '/partners/' },
 ];
 
 export interface ComplianceArea {

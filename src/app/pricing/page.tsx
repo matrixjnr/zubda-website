@@ -4,8 +4,9 @@ import { Container } from '@/components/shared/Container';
 import { PricingCards } from '@/components/pricing/PricingCards';
 
 export const metadata: Metadata = {
-  title: 'Pricing',
-  description: 'Simple, transparent pricing. Start free, upgrade as you grow. No per-transaction fees.',
+  title: 'Pricing. Affordable ERP, POS & Business Software',
+  description: 'Zubda pricing starts at $39/month. POS, accounting, inventory, HR, and CRM, all included. No per-transaction fees. 30-day free trial. Perfect for shops, retailers, wholesalers, and traders in Dubai, Nairobi, Dublin, and beyond.',
+  keywords: ['ERP pricing', 'POS pricing', 'cheap ERP', 'affordable ERP', 'free ERP trial', 'business software pricing', 'Dubai POS price', 'Kenya ERP cost'],
 };
 
 export default function PricingPage() {
@@ -21,9 +22,13 @@ export default function PricingPage() {
             <h1 className="text-5xl md:text-7xl font-semibold tracking-tight text-[#161616] mb-6">
               Plans that grow with your business
             </h1>
-            <p className="text-lg leading-relaxed text-[#525252]">
-              Start free. Upgrade when you need more. No per-transaction fees ever.
+            <p className="text-lg leading-relaxed text-[#525252] mb-6">
+              Every plan includes a 30-day free trial with all features unlocked. No credit card required.
             </p>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-50 border border-green-200">
+              <span className="w-2 h-2 rounded-full bg-green-500" />
+              <span className="text-sm font-medium text-green-700">30 days free &middot; No per-transaction fees &middot; Cancel anytime</span>
+            </div>
           </div>
         </Container>
       </section>

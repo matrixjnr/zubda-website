@@ -10,7 +10,7 @@ export function Footer() {
               <span className="text-xl font-semibold text-white tracking-tight">zubda</span>
               <span className="text-sm font-arabic text-zubda-400">زبدة</span>
             </Link>
-            <p className="text-sm leading-relaxed mb-3">Cloud ERP built for businesses worldwide, with deep roots in the UAE and Gulf region.</p>
+            <p className="text-sm leading-relaxed mb-3">Offline-first cloud ERP for growing businesses. Trusted across the Middle East, East Africa, and Europe.</p>
           </div>
 
           <div>
@@ -43,7 +43,7 @@ export function Footer() {
 
         <div className="mt-16 pt-8 border-t border-zubda-800 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-gray-500">&copy; {new Date().getFullYear()} Zubda. All rights reserved.</p>
-          <p className="text-xs text-gray-600">Designed and built in the UAE</p>
+          <p className="text-xs text-gray-600">Dubai &middot; Nairobi &middot; Dublin</p>
         </div>
       </div>
     </footer>

@@ -8,6 +8,7 @@ const navLinks = [
   { label: 'Pricing', href: '/pricing/' },
   { label: 'Enterprise', href: '/enterprise/' },
   { label: 'Compliance', href: '/compliance/' },
+  { label: 'Partners', href: '/partners/' },
 ];
 
 export function Header() {

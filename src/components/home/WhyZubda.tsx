@@ -8,11 +8,11 @@ const differentiators = [
   },
   {
     title: 'Gulf-native, globally ready',
-    description: 'Built from day one for FTA VAT, WPS payroll, Arabic invoices, and AED. Not a Western ERP with a localization patch — but versatile enough for any country.',
+    description: 'Built from day one for FTA VAT, WPS payroll, Arabic invoices, and AED. Not a Western ERP with a localization patch, but versatile enough for any country.',
   },
   {
     title: 'Fast and reliable',
-    description: 'Purpose-built for speed and stability. Native apps for macOS, Windows, Linux, iOS, and Android that feel instant — not a web app in disguise.',
+    description: 'Purpose-built for speed and stability. Native apps for macOS, Windows, Linux, iOS, and Android that feel instant, not a web app in disguise.',
   },
   {
     title: 'Affordable',

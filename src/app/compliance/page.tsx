@@ -3,11 +3,11 @@ import { complianceAreas } from '@/lib/constants';
 import { Container } from '@/components/shared/Container';
 
 export const metadata: Metadata = {
-  title: 'UAE/GCC Compliance',
-  description: 'FTA VAT compliance, WPS payroll, Arabic bilingual invoices with QR codes. Compliance built in, not bolted on.',
+  title: 'Tax & Regulatory Compliance',
+  description: 'VAT compliance, payroll, tax invoicing, and regulatory requirements, built in for every market we serve. Not an add-on.',
 };
 
-const countries = ['UAE', 'Saudi Arabia', 'Qatar', 'Bahrain', 'Kuwait', 'Oman', 'Jordan', 'Egypt', 'Global'];
+const countries = ['UAE', 'Saudi Arabia', 'Kenya', 'Uganda', 'Tanzania', 'Ireland', 'Qatar', 'Bahrain', 'Kuwait', 'Oman', 'Rwanda', 'Ethiopia'];
 
 export default function CompliancePage() {
   return (
@@ -17,13 +17,13 @@ export default function CompliancePage() {
         <Container>
           <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-widest text-zubda-500 mb-6">
-              UAE / GCC Compliance
+              Tax & Regulatory Compliance
             </p>
             <h1 className="text-5xl md:text-7xl font-semibold tracking-tight mb-6">
               Compliance is not an add-on. It is the foundation.
             </h1>
             <p className="text-lg leading-relaxed text-gray-400 max-w-2xl">
-              Zubda is built from the ground up for UAE and GCC regulatory requirements. Every feature respects local tax law, labor law, and business practices — while remaining flexible for use anywhere in the world.
+              Zubda is built from the ground up for local regulatory requirements in every market we serve. Tax law, labor law, and invoicing standards are built into every module, not bolted on.
             </p>
           </div>
         </Container>
@@ -60,15 +60,13 @@ export default function CompliancePage() {
         <Container>
           <div className="max-w-3xl mx-auto">
             <p className="text-sm font-medium uppercase tracking-widest text-zubda-500 mb-4">
-              Global Reach
+              Where We Operate
             </p>
             <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-[#161616] mb-6">
-              Gulf roots. Global reach.
+              Compliant wherever you do business
             </h2>
             <p className="text-lg leading-relaxed text-[#525252] mb-8">
-              While Zubda has deep UAE and GCC compliance built in, the system is designed to be
-              versatile. Configurable tax rules, multi-currency support, and flexible localization
-              mean you can run your business from Dubai to London to Singapore — all on the same platform.
+              Configurable tax rules, multi-currency support, and flexible localization mean you can run your business across borders on a single platform. Select your country during onboarding and compliance is configured automatically.
             </p>
             <p className="text-sm text-[#525252]">
               <span className="font-medium text-[#161616]">Supported regions:</span>{' '}
@@ -88,7 +86,7 @@ export default function CompliancePage() {
             Compliance-ready from day one
           </h2>
           <p className="text-lg leading-relaxed text-gray-400 mb-10 max-w-lg mx-auto">
-            Start your free trial and experience built-in compliance — no plugins, no add-ons, no extra cost.
+            Start your free trial and experience built-in compliance: no plugins, no add-ons, no extra cost.
           </p>
           <a
             href="/pricing/"
